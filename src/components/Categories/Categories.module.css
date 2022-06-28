@@ -1,0 +1,40 @@
+.categories_container {
+  padding: 2rem 1rem;
+}
+
+.category_item {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4rem 1rem;
+  padding-bottom: 1.5rem;
+  border-radius: 1rem;
+  margin: 4.5rem auto;
+}
+
+.category_image_container {
+  width: 40%;
+  position: absolute;
+  top: -3rem;
+}
+
+.category_image {
+  width: 100%;
+}
+
+.category_item:hover .category_image {
+  transform: scale(120%);
+}
+
+.category_name {
+  margin: 1rem 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  /* margin-top: 1rem; */
+}
