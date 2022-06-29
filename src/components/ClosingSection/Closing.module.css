@@ -38,3 +38,26 @@
     padding: 0 15%;
   }
 }
+
+@media (min-width: 950px) {
+  .closing_section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+  }
+
+  .closing_image_container {
+    width: 49%;
+  }
+
+  .closing_text {
+    width: 45%;
+    text-align: left;
+  }
+
+  .closing_text p {
+    padding: 0;
+  }
+}

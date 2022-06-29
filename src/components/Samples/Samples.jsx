@@ -35,9 +35,8 @@ const Samples = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
+          <button className={styles.sample_one_btn}>SEE PRODUCT</button>
         </div>
-
-        <button className={styles.sample_one_btn}>SEE PRODUCT</button>
       </div>
 
       <div className={styles.sample_two}>

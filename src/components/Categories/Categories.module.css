@@ -55,3 +55,13 @@
     width: 60%;
   }
 }
+
+@media (min-width: 950px) {
+  .categories_container {
+    padding: 4rem 8rem;
+  }
+
+  .category_image_container {
+    width: 40%;
+  }
+}

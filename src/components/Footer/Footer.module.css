@@ -21,6 +21,10 @@ footer {
   font-weight: 500;
 }
 
+.page_list a:hover {
+  color: #d87d4a;
+}
+
 footer p {
   font-weight: 200;
   color: #ffffff80;
@@ -67,5 +71,25 @@ footer p {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
+  }
+}
+
+@media (min-width: 950px) {
+  footer {
+    padding: 3rem 8rem;
+  }
+
+  .page_list {
+    width: 45%;
+  }
+
+  .socials {
+    right: 8rem;
+    bottom: 3rem;
+  }
+
+  footer p {
+    width: 43%;
+    margin-right: auto;
   }
 }
