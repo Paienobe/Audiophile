@@ -1,0 +1,76 @@
+.samples_container {
+  padding: 0rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.samples_container img {
+  width: 100%;
+}
+
+.sample_one {
+  background-color: #d87d4a;
+  border-radius: 1rem;
+  background-image: url('../../assets/home/desktop/pattern-circles.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.sample_one h2 {
+  font-size: 200%;
+  margin: 1rem 0;
+}
+
+.sample_one p {
+  font-weight: 200;
+}
+
+.sample_one_image_container {
+  width: 55%;
+  margin: auto;
+}
+
+.sample_one_btn {
+  background-color: black;
+}
+
+.sample_one_btn:hover {
+  border: none;
+  font-weight: bold;
+}
+
+.sample_two {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.sample_two_text {
+  position: absolute;
+  left: 1rem;
+  top: 35%;
+}
+
+.sample_btn {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 0;
+}
+
+.sample_three_image_container {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.sample_three_text {
+  background-color: #f1f1f1;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}

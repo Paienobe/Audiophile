@@ -1,0 +1,26 @@
+.closing_section {
+  padding: 4rem 1rem;
+}
+
+.closing_image_container {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.closing_image_container img {
+  width: 100%;
+}
+
+.closing_text {
+  text-align: center;
+  padding: 1.5rem 0.75rem;
+}
+
+.closing_text span {
+  color: #d87d4a;
+}
+
+.closing_text p {
+  margin-top: 1rem;
+  font-weight: 200;
+}
