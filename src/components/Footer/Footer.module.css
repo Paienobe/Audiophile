@@ -7,6 +7,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .page_list {
@@ -34,4 +35,37 @@ footer p {
   align-items: center;
   width: 7rem;
   justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  footer {
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .footer_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .page_list {
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .copyright {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  .socials {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
 }

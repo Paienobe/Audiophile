@@ -36,5 +36,22 @@
 .btn {
   display: flex;
   align-items: center;
-  /* margin-top: 1rem; */
+}
+
+@media (min-width: 640px) {
+  .categories_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .category_item {
+    width: 32%;
+    margin-bottom: 1rem;
+  }
+
+  .category_image_container {
+    width: 60%;
+  }
 }

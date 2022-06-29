@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 const AppContext = React.createContext()
 
@@ -17,6 +17,7 @@ const AppProvider = ({ children }) => {
         : desktopImage
     return chosenImage
   }
+
   return (
     <AppContext.Provider value={{ getCorrectImageForScreenSize }}>
       {children}

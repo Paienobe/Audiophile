@@ -4,4 +4,22 @@ header {
   justify-content: space-between;
   padding: 2rem 1rem;
   background-color: #191919;
+  position: relative;
+}
+
+.mobile_menu_container {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
+  left: 0;
+  right: 0;
+  top: -65rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  header {
+    padding: 2rem;
+  }
 }

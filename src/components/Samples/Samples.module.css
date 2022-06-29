@@ -74,3 +74,48 @@
   padding: 2rem 1rem;
   border-radius: 1rem;
 }
+
+@media (min-width: 640px) {
+  .samples_container {
+    padding: 0 2rem;
+    margin-top: 3rem;
+  }
+
+  .sample_one {
+    background-position: top;
+    padding: 3rem 22.5%;
+    padding-bottom: 1rem;
+  }
+
+  .sample_one h2 {
+    font-size: 280%;
+    margin: 1rem 0;
+    letter-spacing: 0.5rem;
+  }
+
+  .sample_one_btn {
+    margin-top: 3rem;
+  }
+
+  .sample_two_text {
+    position: absolute;
+    left: 3rem;
+    top: 35%;
+  }
+
+  .sample_three {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .sample_three_image_container,
+  .sample_three_text {
+    margin: 0;
+    width: 49%;
+  }
+
+  .sample_three_text {
+    padding: 12% 2rem;
+  }
+}

@@ -25,7 +25,7 @@
   letter-spacing: 0.5rem;
 }
 
-h1 {
+.text_container h1 {
   margin: 1rem 0;
   font-size: 250%;
 }
@@ -48,4 +48,15 @@ button:hover {
 
 .hero_img {
   width: 100%;
+}
+
+@media (min-width: 640px) {
+  .text_container {
+    padding: 0 25%;
+  }
+
+  .text_container h1 {
+    margin: 1rem 0;
+    font-size: 350%;
+  }
 }

@@ -9,16 +9,19 @@ const Footer = () => {
   const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
   return (
     <footer>
-      <img src={logo} alt='logo' />
-      <div className={styles.page_list}>
-        {pages.map((link) => {
-          return (
-            <Link to='/' key={uuid()}>
-              {link}
-            </Link>
-          )
-        })}
+      <div className={styles.footer_top}>
+        <img src={logo} alt='logo' />
+        <div className={styles.page_list}>
+          {pages.map((link) => {
+            return (
+              <Link to='/' key={uuid()}>
+                {link}
+              </Link>
+            )
+          })}
+        </div>
       </div>
+
       <p>
         Audiophile is an all in one step to fulfill your audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
