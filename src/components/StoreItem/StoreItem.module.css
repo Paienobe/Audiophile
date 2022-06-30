@@ -1,0 +1,22 @@
+.store_item {
+  text-align: center;
+}
+
+.store_item p {
+  font-weight: 200;
+  margin: 1rem 0;
+  margin-bottom: 0;
+}
+
+.store_item h2 {
+  font-size: 230%;
+}
+
+.image_container {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image_container img {
+  width: 100%;
+}

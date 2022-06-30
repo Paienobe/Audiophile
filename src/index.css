@@ -22,3 +22,7 @@ a {
 img {
   display: block;
 }
+
+.store_item_container {
+  padding: 3rem 1rem;
+}
