@@ -7,10 +7,11 @@ import cart from '../../assets/shared/desktop/icon-cart.svg'
 import Categories from '../Categories/Categories'
 import { Link } from 'react-router-dom'
 import uuid from 'react-uuid'
+import { useGlobalContext } from '../../context/globalContext'
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false)
   const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
+  const { showMenu, setShowMenu } = useGlobalContext()
 
   return (
     <header>
@@ -28,15 +29,30 @@ const Header = () => {
         </div>
       )}
 
-      <div>
-        <img src={logo} alt='logo' />
-      </div>
+      <Link to='/'>
+        <div>
+          <img src={logo} alt='logo' />
+        </div>
+      </Link>
 
-      <nav>
-        {pages.map((page) => {
-          return <Link to='/'>{page}</Link>
-        })}
-      </nav>
+      {window.innerWidth >= 950 && (
+        <nav>
+          {pages.map((page) => {
+            return (
+              <Link
+                to={
+                  page.toLowerCase() === 'home'
+                    ? '/'
+                    : `/store/${page.toLowerCase()}`
+                }
+                key={uuid()}
+              >
+                {page}
+              </Link>
+            )
+          })}
+        </nav>
+      )}
 
       <div className={styles.cart_container}>
         <img src={cart} alt='cart' />

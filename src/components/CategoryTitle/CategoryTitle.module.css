@@ -1,0 +1,8 @@
+.category_title {
+  background-color: #191919;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

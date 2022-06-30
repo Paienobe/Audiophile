@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import data from '../data/data.json'
 
 const AppContext = React.createContext()
 
@@ -17,9 +18,13 @@ const AppProvider = ({ children }) => {
         : desktopImage
     return chosenImage
   }
+  const [showMenu, setShowMenu] = useState(false)
+  const [storeData, setStoreData] = useState(data)
 
   return (
-    <AppContext.Provider value={{ getCorrectImageForScreenSize }}>
+    <AppContext.Provider
+      value={{ getCorrectImageForScreenSize, showMenu, setShowMenu, storeData }}
+    >
       {children}
     </AppContext.Provider>
   )

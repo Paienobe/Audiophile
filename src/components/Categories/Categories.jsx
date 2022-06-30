@@ -5,6 +5,8 @@ import earphoneImage from '../../assets/shared/desktop/image-earphones.png'
 import styles from './Categories.module.css'
 import uuid from 'react-uuid'
 import { FaAngleRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../../context/globalContext'
 
 const Categories = () => {
   const categories = [
@@ -12,6 +14,7 @@ const Categories = () => {
     { name: 'SPEAKERS', image: speakerImage },
     { name: 'EARPHONES', image: earphoneImage },
   ]
+  const { showMenu, setShowMenu } = useGlobalContext()
   return (
     <div className={styles.categories_container}>
       {categories.map((item) => {
@@ -25,10 +28,17 @@ const Categories = () => {
               />
             </div>
             <h3 className={styles.category_name}>{item.name}</h3>
-            <div className={styles.btn}>
-              <p>SHOP</p>
-              <FaAngleRight size={20} style={{ color: '#d87d4a' }} />
-            </div>
+            <Link
+              to={`/store/${item.name.toLowerCase()}`}
+              onClick={() => {
+                setShowMenu(false)
+              }}
+            >
+              <div className={styles.btn}>
+                <p>SHOP</p>
+                <FaAngleRight size={20} style={{ color: '#d87d4a' }} />
+              </div>
+            </Link>
           </div>
         )
       })}
