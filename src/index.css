@@ -26,3 +26,15 @@ img {
 .store_item_container {
   padding: 3rem 1rem;
 }
+
+@media (min-width: 640px) {
+  .store_item_container {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .store_item_container {
+    padding: 3rem 8rem;
+  }
+}
