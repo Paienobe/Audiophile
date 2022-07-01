@@ -20,3 +20,58 @@
 .image_container img {
   width: 100%;
 }
+
+@media (min-width: 640px) {
+  .store_item p {
+    margin: 1rem 3rem;
+  }
+
+  .store_item h2 {
+    margin: 0 12rem;
+  }
+
+  .store_item button {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .store_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+
+  .store_item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .store_item:last-child {
+    margin-bottom: 0;
+  }
+
+  .image_container {
+    width: 45%;
+  }
+
+  .text_container {
+    width: 45%;
+  }
+
+  .store_item p {
+    margin: 1rem 0;
+  }
+
+  .store_item h2 {
+    margin: 0;
+    width: 55%;
+  }
+
+  .store_item button {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}

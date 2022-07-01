@@ -71,10 +71,12 @@ const StoreItem = ({ name, image, description, new: isNew }) => {
         <img src={itemImageToBeDisplayed} alt='product_image' />
       </div>
 
-      <p>{isNew && 'NEW PROJECT'}</p>
-      <h2>{name.toUpperCase()}</h2>
-      <p>{description}</p>
-      <button>SEE PRODUCT</button>
+      <div className={styles.text_container}>
+        <p>{isNew && 'NEW PROJECT'}</p>
+        <h2>{name.toUpperCase()}</h2>
+        <p>{description}</p>
+        <button>SEE PRODUCT</button>
+      </div>
     </div>
   )
 }
