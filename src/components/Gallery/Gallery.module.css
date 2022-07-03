@@ -1,0 +1,34 @@
+.gallery_image {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 4.5fr 6.25fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      'a c'
+      'b c';
+    column-gap: 0.8rem;
+    margin-top: 3rem;
+  }
+
+  .gallery_image {
+    margin: 0;
+  }
+
+  .gallery_image:nth-child(1) {
+    grid-area: a;
+  }
+
+  .gallery_image:nth-child(2) {
+    grid-area: b;
+  }
+
+  .gallery_image:nth-child(3) {
+    grid-area: c;
+  }
+}

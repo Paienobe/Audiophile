@@ -17,7 +17,7 @@ const CategoryPage = () => {
   })
 
   return (
-    <div>
+    <>
       <CategoryTitle title={selectedCategory} />
       <div className='store_item_container'>
         {storeItemsForSelectedCategory.map((item) => {
@@ -26,7 +26,7 @@ const CategoryPage = () => {
       </div>
       <Categories />
       <Closing />
-    </div>
+    </>
   )
 }
 
