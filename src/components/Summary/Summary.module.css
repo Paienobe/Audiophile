@@ -1,0 +1,19 @@
+.summary {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.summary button {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media (min-width: 950px) {
+  .summary {
+    margin: 0;
+    width: 38%;
+    height: min-content;
+  }
+}
