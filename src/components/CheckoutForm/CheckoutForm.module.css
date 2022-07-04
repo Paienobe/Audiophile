@@ -1,0 +1,92 @@
+form {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #c5c4c4;
+  margin: 1rem 0;
+}
+
+form h1 {
+  margin-bottom: 1.5rem;
+}
+
+form h4 {
+  color: #d87d4a;
+  margin: 1rem 0;
+}
+
+label {
+  font-weight: bold;
+  font-size: 85%;
+}
+
+.radio_container {
+  border: 1px solid #c5c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.radio_container p {
+  width: 90%;
+  font-weight: bold;
+}
+
+input[type='radio'] {
+  margin: 0;
+  padding: 0;
+  width: 5%;
+}
+
+@media (min-width: 640px) {
+  form {
+    font-size: 1rem;
+  }
+
+  .billing_details,
+  .shipping_details,
+  .emoney_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .billing_details div,
+  .emoney_details div,
+  .shipping_details div {
+    width: 48%;
+  }
+
+  .payment_method {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio_housing {
+    width: 50%;
+  }
+
+  .radio_container:first-child {
+    margin-top: 0;
+  }
+
+  .emoney_details {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 950px) {
+  form {
+    width: 58%;
+  }
+}
