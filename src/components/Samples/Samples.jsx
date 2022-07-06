@@ -10,9 +10,13 @@ import earpieceTab from '../../assets/home/tablet/image-earphones-yx1.jpg'
 import earpieceDesktop from '../../assets/home/desktop/image-earphones-yx1.jpg'
 import { useGlobalContext } from '../../context/globalContext'
 import styles from './Samples.module.css'
+import { Link } from 'react-router-dom'
 
 const Samples = () => {
-  const { getCorrectImageForScreenSize } = useGlobalContext()
+  const { getCorrectImageForScreenSize, setCurrentPage } = useGlobalContext()
+  const highlightCurrentPage = (pageTitle) => {
+    setCurrentPage(pageTitle)
+  }
   return (
     <section className={styles.samples_container}>
       <div className={styles.sample_one}>
@@ -35,14 +39,28 @@ const Samples = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <button className={styles.sample_one_btn}>SEE PRODUCT</button>
+          <Link to='/store/speakers/zx9-speaker'>
+            <button
+              className={styles.sample_one_btn}
+              onClick={() => setCurrentPage('SPEAKERS')}
+            >
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
       </div>
 
       <div className={styles.sample_two}>
         <div className={styles.sample_two_text}>
           <h2>ZX7 SPEAKER</h2>
-          <button className={styles.sample_btn}>SEE PRODUCT</button>
+          <Link to='/store/speakers/zx9-speaker'>
+            <button
+              className={styles.sample_btn}
+              onClick={() => setCurrentPage('SPEAKERS')}
+            >
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
         <div className={styles.sample_two_image_container}>
           <img
@@ -69,7 +87,14 @@ const Samples = () => {
         </div>
         <div className={styles.sample_three_text}>
           <h2>YX1 EARPHONES</h2>
-          <button className={styles.sample_btn}>SEE PRODUCT</button>
+          <Link to='/store/earphones/yx1-earphones'>
+            <button
+              className={styles.sample_btn}
+              onClick={() => setCurrentPage('EARPHONES')}
+            >
+              SEE PRODUCT
+            </button>
+          </Link>
         </div>
       </div>
     </section>

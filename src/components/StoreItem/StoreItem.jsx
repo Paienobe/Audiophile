@@ -4,11 +4,46 @@ import styles from './StoreItem.module.css'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { categoryImages, actualProductImage } from './imports_and_assets'
+import { useState } from 'react'
 
 const StoreItem = ({ name, image, description, new: isNew, slug, price }) => {
-  const { getCorrectImageForScreenSize } = useGlobalContext()
+  const { getCorrectImageForScreenSize, cartData, setCartData } =
+    useGlobalContext()
 
   const category = useParams().category.toLowerCase()
+
+  const [itemQuantity, setItemQuantity] = useState(1)
+
+  const increaseItemQuantity = () => {
+    setItemQuantity(itemQuantity + 1)
+  }
+
+  const decreaseItemQuantity = () => {
+    if (itemQuantity === 1) {
+      setItemQuantity(1)
+    } else {
+      setItemQuantity(itemQuantity - 1)
+    }
+  }
+
+  const addItemToCart = () => {
+    const checkIfItemIsAlreadyInCart = cartData.find((item) => {
+      return item.name === name
+    })
+
+    if (!checkIfItemIsAlreadyInCart) {
+      setCartData([...cartData, { name, price, quantity: itemQuantity, image }])
+    } else {
+      const updatedCartData = cartData.map((item) => {
+        if (item.name === name) {
+          return { ...item, quantity: item.quantity + itemQuantity }
+        } else {
+          return item
+        }
+      })
+      setCartData(updatedCartData)
+    }
+  }
 
   return (
     <>
@@ -54,11 +89,11 @@ const StoreItem = ({ name, image, description, new: isNew, slug, price }) => {
             <h3 className={styles.price}>${price}</h3>
             <div className={styles.button_container}>
               <div>
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                <button onClick={decreaseItemQuantity}>-</button>
+                <p>{itemQuantity}</p>
+                <button onClick={increaseItemQuantity}>+</button>
               </div>
-              <button>ADD TO CART</button>
+              <button onClick={addItemToCart}>ADD TO CART</button>
             </div>
           </div>
         </div>

@@ -6,13 +6,11 @@ import { useGlobalContext } from '../../context/globalContext'
 
 const Gallery = ({ image }) => {
   const { getCorrectImageForScreenSize } = useGlobalContext()
-  console.log(galleryImages[image])
 
   const galleryImageForSelectedProducts = galleryImages[image].map((images) => {
     return getCorrectImageForScreenSize(images[0], images[1], images[2])
   })
 
-  console.log(galleryImageForSelectedProducts)
   return (
     <div className={styles.gallery}>
       {galleryImageForSelectedProducts.map((picture) => {

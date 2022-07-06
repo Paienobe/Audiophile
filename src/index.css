@@ -23,6 +23,10 @@ img {
   display: block;
 }
 
+button {
+  cursor: pointer;
+}
+
 .store_item_container {
   padding: 3rem 1rem;
 }
@@ -34,6 +38,7 @@ img {
 
 .back_btn:hover {
   color: #d87d4a;
+  cursor: pointer;
 }
 
 .item_page_content_container,
@@ -80,5 +85,9 @@ img {
   .checkout_page_container {
     display: flex;
     justify-content: space-between;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

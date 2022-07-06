@@ -1,0 +1,143 @@
+.cart_container {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+}
+
+.cart {
+  background-color: white;
+  border: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 8rem;
+  position: relative;
+}
+
+.empty_cart {
+  text-align: center;
+}
+
+.empty_image {
+  margin-top: 1rem;
+}
+
+.cart img {
+  width: 100%;
+}
+
+.cart_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.cart_head p {
+  color: #a7a4a4;
+}
+
+.all_items_holder {
+  max-height: 12rem;
+  overflow-y: scroll;
+}
+
+.item_details_container {
+  display: flex;
+  align-items: center;
+}
+
+.item_details {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  width: 65%;
+}
+
+.item_details .image_container {
+  width: 30%;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.button_container {
+  align-items: center;
+  width: 35%;
+}
+
+.button_container div {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.button_container p {
+  width: 33%;
+  text-align: center;
+}
+
+.button_container button {
+  width: 33%;
+  background-color: #f1f1f1;
+  color: black;
+  margin: 0;
+}
+
+.button_container button:hover {
+  background-color: #f1f1f1;
+}
+
+.checkout_button {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.total_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.total_container p:first-child {
+  color: #a7a4a4;
+}
+
+.total_container p:last-child {
+  font-weight: bold;
+}
+
+.close {
+  position: absolute;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+  top: -1rem;
+  right: -0.5rem;
+}
+
+@media (min-width: 640px) {
+  .cart {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 950px) {
+  .cart {
+    max-width: 25%;
+    margin-right: 8rem;
+  }
+}
