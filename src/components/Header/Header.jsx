@@ -8,10 +8,23 @@ import Categories from '../Categories/Categories'
 import { Link } from 'react-router-dom'
 import uuid from 'react-uuid'
 import { useGlobalContext } from '../../context/globalContext'
+import Cart from '../Cart/Cart'
 
 const Header = () => {
   const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
-  const { showMenu, setShowMenu } = useGlobalContext()
+  const {
+    showMenu,
+    setShowMenu,
+    showCart,
+    setShowCart,
+    cartData,
+    currentPage,
+    setCurrentPage,
+  } = useGlobalContext()
+
+  const numberOfItemInCart = cartData?.reduce((currentTotal, item) => {
+    return item.quantity + currentTotal
+  }, 0)
 
   return (
     <header>
@@ -46,6 +59,8 @@ const Header = () => {
                     : `/store/${page.toLowerCase()}`
                 }
                 key={uuid()}
+                style={currentPage === page ? { color: '#d87c4a' } : {}}
+                onClick={() => setCurrentPage(page)}
               >
                 {page}
               </Link>
@@ -54,7 +69,16 @@ const Header = () => {
         </nav>
       )}
 
-      <div className={styles.cart_container}>
+      <div
+        className={styles.cart_container}
+        onClick={() => {
+          setShowCart(true)
+        }}
+        style={{ cursor: 'pointer' }}
+      >
+        {numberOfItemInCart > 0 && (
+          <p className={styles.item_count}>{numberOfItemInCart}</p>
+        )}
         <img src={cart} alt='cart' />
       </div>
 
@@ -64,6 +88,9 @@ const Header = () => {
       >
         <Categories />
       </div>
+
+      {showCart && <Cart />}
+
       {window.innerWidth >= 950 && <hr />}
     </header>
   )

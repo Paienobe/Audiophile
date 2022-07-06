@@ -4,18 +4,31 @@ import logo from '../../assets/shared/desktop/logo.svg'
 import { Link } from 'react-router-dom'
 import uuid from 'react-uuid'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
-
+import { useGlobalContext } from '../../context/globalContext'
 const Footer = () => {
-  const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES']
+  const { setCurrentPage } = useGlobalContext()
+  const pages = [
+    { name: 'HOME', link: '/' },
+    { name: 'HEADPHONES', link: '/store/headphones' },
+    { name: 'SPEAKERS', link: '/store/speakers' },
+    { name: 'EARPHONES', link: '/store/earphones' },
+  ]
   return (
     <footer>
       <div className={styles.footer_top}>
-        <img src={logo} alt='logo' />
+        <Link to='/'>
+          <img src={logo} alt='logo' />
+        </Link>
+
         <div className={styles.page_list}>
-          {pages.map((link) => {
+          {pages.map((page) => {
             return (
-              <Link to='/' key={uuid()}>
-                {link}
+              <Link
+                to={page.link}
+                key={uuid()}
+                onClick={() => setCurrentPage(page.name)}
+              >
+                {page.name}
               </Link>
             )
           })}

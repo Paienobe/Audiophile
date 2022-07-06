@@ -104,7 +104,7 @@ export const actualProductImage = {
     xx99M2Desktop,
   ],
   zx7_speaker_pictures: [zx7SpeakerMobile, zx7SpeakerTablet, zx7SpeakerDesktop],
-  zx9_speaker_pictures: [zx9SpeakerMobile, zx9SpeakerTablet, zx7SpeakerDesktop],
+  zx9_speaker_pictures: [zx9SpeakerMobile, zx9SpeakerTablet, zx9SpeakerDesktop],
 }
 
 /* The above objects hold images needed for each type of product. Each product has a key and the value of that key is an array that holds the required images. Theres 3 images in each array. One for mobile, tablet and desktop. Above there's a function gotten from global context to "getCorrectImageForScreenSize", this takes in 3 images as parameters and returns one depending on the width of the users screen size.

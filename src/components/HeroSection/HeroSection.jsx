@@ -4,9 +4,10 @@ import heroImageTab from '../../assets/home/tablet/image-header.jpg'
 import heroImageDesktop from '../../assets/home/desktop/image-hero.jpg'
 import styles from './HeroSection.module.css'
 import { useGlobalContext } from '../../context/globalContext'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
-  const { getCorrectImageForScreenSize } = useGlobalContext()
+  const { getCorrectImageForScreenSize, setCurrentPage } = useGlobalContext()
   return (
     <section className={styles.hero_section}>
       <div className={styles.text_container}>
@@ -16,7 +17,11 @@ const HeroSection = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button className='btn'>SEE PRODUCT</button>
+        <Link to='/store/headphones/xx99-mark-two-headphones'>
+          <button className='btn' onClick={() => setCurrentPage('HEADPHONES')}>
+            SEE PRODUCT
+          </button>
+        </Link>
       </div>
 
       <div className='image_container'>

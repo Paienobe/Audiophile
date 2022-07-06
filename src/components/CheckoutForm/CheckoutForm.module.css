@@ -1,4 +1,4 @@
-form {
+.form_body {
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -12,11 +12,11 @@ input {
   margin: 1rem 0;
 }
 
-form h1 {
+.form_body h1 {
   margin-bottom: 1.5rem;
 }
 
-form h4 {
+.form_body h4 {
   color: #d87d4a;
   margin: 1rem 0;
 }
@@ -47,8 +47,12 @@ input[type='radio'] {
   width: 5%;
 }
 
+.cash_payment {
+  margin: 1rem 0;
+}
+
 @media (min-width: 640px) {
-  form {
+  .form_body {
     font-size: 1rem;
   }
 
@@ -86,7 +90,7 @@ input[type='radio'] {
 }
 
 @media (min-width: 950px) {
-  form {
+  .form_body {
     width: 58%;
   }
 }

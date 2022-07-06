@@ -18,6 +18,25 @@ header {
   overflow: hidden;
 }
 
+.cart_container {
+  position: relative;
+}
+
+.item_count {
+  position: absolute;
+  color: white;
+  background-color: #d87d4a;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 12px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -0.75rem;
+  left: 0.75rem;
+}
+
 @media (min-width: 640px) {
   header {
     padding: 2rem;
@@ -48,5 +67,7 @@ header {
     left: 8rem;
     right: 8rem;
     bottom: 0;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 0;
   }
 }
