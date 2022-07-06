@@ -41,12 +41,12 @@ const AppProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if (showCart) {
+    if (showCart || completedOrder) {
       document.body.style.overflowY = 'hidden'
     } else {
       document.body.style.overflowY = 'unset'
     }
-  }, [showCart])
+  }, [showCart, completedOrder])
 
   const shippingFee = 50
 

@@ -8,13 +8,6 @@ import { useGlobalContext } from '../context/globalContext'
 const CheckoutPage = () => {
   const navigate = useNavigate()
   const { completedOrder, setCompletedOrder } = useGlobalContext()
-  useEffect(() => {
-    if (completedOrder) {
-      document.body.style.overflowY = 'hidden'
-    } else {
-      document.body.style.overflowY = 'visible'
-    }
-  }, [completedOrder])
 
   const pathName = useLocation()
   useEffect(() => {
