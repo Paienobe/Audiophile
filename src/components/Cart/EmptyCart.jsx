@@ -16,7 +16,7 @@ const EmptyCart = () => {
       </div>
       <p style={{ textAlign: 'center' }}>Your cart is empty</p>
       <img
-        src='https://shop.myfelt-europe.com/skin/frontend/rwd/myfelt-2018/images/cart-noitem-mobile.gif'
+        src='https://www.qrcardboard.com/images/cart.gif?v=01'
         alt='empty_cart'
         className={styles.empty_image}
       />
