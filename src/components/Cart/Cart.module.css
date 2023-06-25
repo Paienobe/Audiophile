@@ -26,6 +26,8 @@
 
 .empty_image {
   margin-top: 1rem;
+  width:200px;
+  height:200px;
 }
 
 .cart img {
